@@ -14,10 +14,23 @@
 <html>
 <head>
     <title>管理员登陆</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script>
+        function validateForm() {
+            var x = document.forms["input"]["account"].value;
+            var y = document.forms["input"]["pwd"].value;
+            if (x == null || x == "") {
+                alert("请填写完整信息！");
+            }
+            if (y == null || y == "") {
+                alert("请填写完整信息！");
+            }
+        }
+    </script>
 </head>
 <body>
 <h1>管理员登陆</h1>
-<form name="input" action="Check.jsp" method="post">
+<form name="input" action="Check.jsp" method="post" onsubmit="validateForm()">
     账号：<input type="text" name="account"><br>
     密码：<input type="password" name="pwd"><br>
     <input type="submit" value="登陆">

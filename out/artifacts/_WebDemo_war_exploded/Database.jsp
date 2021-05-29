@@ -20,5 +20,5 @@
 <%
     Class.forName("com.mysql.jdbc.Driver").newInstance();
     Connection conn = DriverManager.getConnection(url);
-    //至此数据库连接成功
+    //数据库连接
 %>

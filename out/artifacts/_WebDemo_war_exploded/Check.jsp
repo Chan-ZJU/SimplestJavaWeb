@@ -13,23 +13,18 @@
     stmt.setString(1, request.getParameter("account"));
     stmt.setString(2, request.getParameter("pwd"));
     ResultSet rs = stmt.executeQuery();
-    try {
-        if (!rs.first()) //没有账号或密码错误，登陆失败
-        {
-            login = false;
-            out.println("<script>" +
-                    "alert(\"账号不存在或密码错误\");" +
-                    "window.location.href=\"./index.jsp\";" +
-                    "</script>");
-        } else {
-            login = true;
-            out.println("<script>" +
-                    "alert(\"登陆成功\");" +
-                    "window.location.href=\"./Login.jsp\";" +
-                    "</script>");
-        }
-    } catch (
-            SQLException throwables) {
-        throwables.printStackTrace();
+    if (!rs.first()) //没有账号或密码错误，登陆失败
+    {
+        login = false;
+        out.println("<script>" +
+                "alert(\"账号不存在或密码错误\");" +
+                "window.location.href=\"./index.jsp\";" +
+                "</script>");
+    } else {
+        login = true;
+        out.println("<script>" +
+                "alert(\"登陆成功\");" +
+                "window.location.href=\"./Login.jsp\";" +
+                "</script>");
     }
 %>

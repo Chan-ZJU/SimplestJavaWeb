@@ -1,0 +1,25 @@
+head {
+    align-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+body {
+    text-align: center;
+    align-content: center;
+    margin: auto;
+}
+
+h1 {
+    color: pink;
+    font-family: "宋体";
+    align-content: center;
+    margin: auto;
+}
+
+input {
+    width: auto;
+    box-shadow: aliceblue;
+    border-radius: 2px;
+    margin: auto;
+}

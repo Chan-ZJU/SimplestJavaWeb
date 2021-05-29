@@ -1,0 +1,35 @@
+head {
+    align-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+body {
+    text-align: center;
+    align-content: center;
+    margin: auto;
+}
+
+h2 {
+    color: pink;
+    margin: auto;
+}
+
+table, th, tr {
+    text-align: center;
+    border: 1px solid black;
+    margin: auto;
+}
+
+td {
+    border: 1px solid black;
+    color: black;
+    margin: auto;
+}
+
+input {
+    width: auto;
+    box-shadow: aliceblue;
+    border-radius: 2px;
+    margin: auto;
+}

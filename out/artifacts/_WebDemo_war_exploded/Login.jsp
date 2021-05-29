@@ -11,6 +11,23 @@
 <html>
 <head>
     <title>借书证管理</title>
+    <link rel="stylesheet" type="text/css" href="Login.css">
+    <script>
+        function validateForm() {
+            var x = document.forms["input"]["cardID"].value;
+            var y = document.forms["input"]["name"].value;
+            var z = document.forms["input"]["unit"].value;
+            if (x == null || x == "") {
+                alert("请填写完整信息！");
+            }
+            if (y == null || y == "") {
+                alert("请填写完整信息！");
+            }
+            if (z == null || z == "") {
+                alert("请填写完整信息！");
+            }
+        }
+    </script>
 </head>
 <body>
 <%
@@ -19,7 +36,7 @@
         String sql = "select * from card";
         PreparedStatement stmt = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
         ResultSet rs = stmt.executeQuery();%>
-<h2>借书证管理</h2>
+<h2><span style="color: antiquewhite">借书证管理</span></h2>
 <table>
     <tr>
         <th>卡号</th>
@@ -41,7 +58,7 @@
         }
     %>
 </table>
-<form name="input" action="Card.jsp" method="post">
+<form name="input" action="Card.jsp" method="post" onsubmit="validateForm()">
     卡号：<input type="text" name="cardID"><br>
     姓名：<input type="text" name="name"><br>
     单位：<input type="text" name="unit"><br>
